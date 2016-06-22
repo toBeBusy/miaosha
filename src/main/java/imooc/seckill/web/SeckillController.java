@@ -32,8 +32,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 // 模块名 url:/模块/资源/{id}/细分
 public class SeckillController {
 
-	private final Logger logger = LoggerFactory
-			.getLogger(SeckillController.class);
+	private final Logger logger = LoggerFactory.getLogger(SeckillController.class);
 
 	@Autowired
 	private SeckillService seckillService;
