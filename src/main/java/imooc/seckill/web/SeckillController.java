@@ -46,6 +46,8 @@ public class SeckillController {
 		model.addAttribute("list", list);
 		return "list";
 	}
+	
+	
 
 	@RequestMapping(value = "/{seckillId}/detail", method = RequestMethod.GET)
 	public String detail(@PathVariable("seckillId") Long seckillId, Model model) {
