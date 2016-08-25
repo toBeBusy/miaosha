@@ -69,4 +69,12 @@ public class Seckill {
 				+ ", number=" + number + ", startTime=" + startTime
 				+ ", endTime=" + endTime + ", createTime=" + createTime + "]";
 	}
+	
+	public void readObject(){
+		System.out.println("读对象。");
+	}
+	
+	public void writeObject(){
+		System.out.println("写对象。");
+	}
 }

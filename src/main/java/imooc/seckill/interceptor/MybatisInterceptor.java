@@ -33,6 +33,7 @@ public class MybatisInterceptor implements Interceptor {
 		// 获取将要执行的sql
 		BoundSql boundSql = (BoundSql) metaObject.getValue("delegate.boundSql");
 		String sql = boundSql.getSql();
+		String countSql = "Select count(*) From (" + sql + ")";
 		System.out.println(sql);
 		// 查询总条数
 //		String countSql = "select count(*) from (" + sql + ") a";

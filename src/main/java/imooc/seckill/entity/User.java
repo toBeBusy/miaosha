@@ -1,7 +1,14 @@
 package imooc.seckill.entity;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2782172836356828938L;
+
 	//用户名
 	private String userName;
 	
@@ -73,4 +80,11 @@ public class User {
 				+ ", userPhone=" + userPhone + ", userType=" + userType + "]";
 	}
 	
+	public void readObject(){
+		System.out.println("读对象。");
+	}
+	
+	public void writeObject(){
+		System.out.println("写对象。");
+	}
 }

@@ -41,8 +41,13 @@ public class UserController {
 			session.setAttribute("user", result);
 			Cookie userNameCookie = new Cookie("userName", result.getUserName());
 			Cookie passwordCookie = new Cookie("password", result.getPassword());
+			userNameCookie.setPath("/seckill");
+			passwordCookie.setPath("/seckill");
+			userNameCookie.setMaxAge(1000);
+			passwordCookie.setMaxAge(1000);
 			response.addCookie(userNameCookie);
 			response.addCookie(passwordCookie);
+			
 			
 			return "redirect:/seckill/list";
 		} else {

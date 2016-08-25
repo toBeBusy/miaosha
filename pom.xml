@@ -133,7 +133,7 @@
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat6-maven-plugin</artifactId>
 				<configuration>
-					<url>http://localhost:8080/</url>
+					<url>http://localhost:8081/</url>
 					<server>tomcat-local</server>
 					<path>/</path>
 				</configuration>

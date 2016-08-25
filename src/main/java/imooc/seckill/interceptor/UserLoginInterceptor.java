@@ -1,4 +1,4 @@
-package imooc.seckill.interceptor;
+ package imooc.seckill.interceptor;
 
 import imooc.seckill.entity.User;
 

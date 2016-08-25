@@ -12,6 +12,7 @@ import imooc.seckill.service.SeckillService;
 
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.Executors;
 
 import javax.servlet.http.HttpSession;
 
@@ -39,9 +40,14 @@ public class SeckillController {
 	private SeckillService seckillService;
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public String list(Model model,HttpSession session) {
+	public String list(Model model,HttpSession session,
+			@CookieValue(value="userName",required = false) String userName,
+			@CookieValue(value="password",required = false) String passWord) {
 		List<Seckill> list = seckillService.getSeckills();
 		User user = (User)session.getAttribute("user");
+		System.out.println(userName);
+		System.out.println(passWord);
+		System.out.println(user);
 		logger.debug(user.toString());
 		model.addAttribute("list", list);
 		return "list";
